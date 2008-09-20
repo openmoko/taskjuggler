@@ -145,7 +145,7 @@ rm -f $TMPFILE
 if test "$tj_enable_docs" != "no" ; then
   dnl Check for the stuff needed to generate man pages
   AC_CHECK_PROG(XSLTPROC, xsltproc, xsltproc, no)
-  AC_CHECK_PROG(DOCBOOK_TO_MAN, docbook-to-man, docbook-to-man, no)
+  AC_CHECK_PROG(DOCBOOK2X_MAN, docbook2x-man, docbook2x-man, no)
 
   dnl Check for the stuff needed to create the HTML manual
   if test "$XSLTPROC" = no ; then
@@ -185,7 +185,7 @@ if test "$tj_enable_docs" != "no" ; then
     AC_OUTPUT(docs/en/taskjuggler.xml)
   fi
 
-  if test "$DOCBOOK_TO_MAN" = no ; then
+  if test "$DOCBOOK2X_MAN" = no ; then
     AC_MSG_WARN([Man pages will not be generated])
     DO_NOT_COMPILE="${DO_NOT_COMPILE} man"
   fi  
