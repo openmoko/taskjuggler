@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+FILENAME = $(DEB_SOURCE_PACKAGE)_$(DEB_UPSTREAM_VERSION).orig.tar.gz
+UPFILENAME = $(DEB_SOURCE_PACKAGE)-$(shell echo $(DEB_UPSTREAM_VERSION) | sed 's/~/-/').tar.bz2
+URL = http://www.taskjuggler.org/download/$(UPFILENAME)
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/kde.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+include /usr/share/cdbs/1/rules/utils.mk
+
+DEB_BUILDDIR = .
+DEB_CONFIGURE_EXTRA_FLAGS := --with-docdir=/usr/share/doc/kde/HTML/en/taskjuggler/
+
+install/taskjuggler::
+	install -D -p -m644 debian/taskjuggler.lintian-overrides \
+	  debian/taskjuggler/usr/share/lintian/overrides/taskjuggler
+
+get-orig-source:
+	@@dh_testdir
+	@@[ -d ../tarballs/. ]||mkdir -p ../tarballs
+	@@echo Downloading $(UPFILENAME) from $(URL) ...
+	@@wget -N -nv -T10 -t3 -O ../tarballs/$(UPFILENAME) $(URL)
+	@@echo Converting $(UPFILENAME) to $(FILENAME)
+	@@bzcat ../tarballs/$(UPFILENAME) | gzip -9 > ../tarballs/$(FILENAME)

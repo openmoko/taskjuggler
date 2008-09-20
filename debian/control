@@ -1,0 +1,32 @@
+Source: taskjuggler
+Section: kde
+Priority: optional
+Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: Mark Purcell <msp@debian.org>, Fathi Boudra <fboudra@free.fr>
+Build-Depends: cdbs, debhelper (>= 5), automake1.9, kdelibs4-dev,
+ libkcal2-dev | kdepim-dev, poster, docbook2x, docbook-utils, docbook-xml,
+ openjade, xsltproc
+Standards-Version: 3.7.2
+
+Package: taskjuggler
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, poster
+Description: Project management application
+ TaskJuggler is a project management tool for Linux and UNIX based
+ operating systems. Whether you want to plan your college's shifts for
+ the next month or want to build a skyscraper - TaskJuggler is the tool
+ for you.
+ .
+ Instead of clicking painfully through hundreds of dialog boxes you
+ specify your TaskJuggler project in a simple text format. You simply
+ list all your tasks and their dependencies. The information is sent
+ through TaskJuggler and you will get all sorts of reports in HTML or
+ XML format.
+ .
+ TaskJuggler not only honors the task interdependencies but also takes
+ resource constraints into account. Using TaskJuggler's powerful
+ filtering and reporting algorithms you can create task lists, resource
+ usage tables, status reports, project calendars, and project accounting
+ statements.
+ .
+  Homepage: http://www.taskjuggler.org

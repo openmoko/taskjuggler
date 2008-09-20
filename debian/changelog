@@ -1,0 +1,163 @@
+taskjuggler (2.4.1+git0) unstable; urgency=low
+
+  * Build a version from git to fix a crash with generating reports
+
+ -- Holger Freyther <zecke@selfish.org>  Sat, 19 Sep 2008 14:55:21 +0100
+taskjuggler (2.4.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Mark Purcell <msp@debian.org>  Tue, 03 Jul 2007 18:37:21 +0100
+
+taskjuggler (2.4.0~beta2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Fathi Boudra <fboudra@free.fr>  Tue, 12 Jun 2007 14:33:41 +0200
+
+taskjuggler (2.4.0~beta1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update Chris Schlaeger e-mail in copyright.
+  * Remove branch pull to r1380 and glibc2.5 tzset workaround patches.
+    Merged upstream.
+
+ -- Fathi Boudra <fboudra@free.fr>  Thu, 24 May 2007 17:43:31 +0200
+
+taskjuggler (2.3.1-4) unstable; urgency=low
+
+  * Add workaround for new behaviour of tzset function in glibc 2.5.
+    Thanks to Pierre Habouzit, Aurelien Jarno and Chris Schlaeger.
+    (Closes: #422400)
+
+ -- Fathi Boudra <fboudra@free.fr>  Tue, 15 May 2007 18:14:06 +0200
+
+taskjuggler (2.3.1-3) unstable; urgency=low
+
+  * Robust get-orig-source target
+
+ -- Mark Purcell <msp@debian.org>  Thu, 29 Mar 2007 22:31:56 +0100
+
+taskjuggler (2.3.1-2) experimental; urgency=low
+
+  * Add taskjuggler branch r1380 patch. It fixes durations in printed reports.
+    (Closes: #409112)
+
+ -- Fathi Boudra <fboudra@free.fr>  Sat,  3 Feb 2007 15:54:24 +0100
+
+taskjuggler (2.3.1-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Fathi Boudra <fboudra@free.fr>  Wed, 31 Jan 2007 20:23:36 +0100
+
+taskjuggler (2.3.1~beta1-1) experimental; urgency=low
+
+  * Update documentation path reference in man page (Closes: #387947).
+  * Remove 10_add_autoconf2.60_support.diff, merged upstream.
+
+ -- Fathi Boudra <fboudra@free.fr>  Tue, 16 Jan 2007 18:45:29 +0100
+
+taskjuggler (2.3.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Added taskjuggler and TaskjugglerUI manpages in upstream (Closes: #335533)
+  * Help files can not be found fixed using --with-docdir (Closes: #342764)
+  * TaskJugglerUI crash fixed by upstream (Closes: #347483)
+  * Added menu file provided by Andrea Corradi (Closes: #375917)
+  * Removed dirs file and docprefix patch
+  * Cleaned up rules and watch files
+  * compat: bumped to 5
+  * control:
+    * added Fathi Boudra in Uploaders field
+    * bumped Standards-Version to 3.7.2
+    * remove g++-3.4 build dependency (Closes: #343023)
+
+ -- Fathi Boudra <fboudra@free.fr>  Wed,  6 Sep 2006 16:56:58 +0200
+
+taskjuggler (2.2.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Build-Depends: kdelibs4-dev (>= 4:3.4.3-1) during c++ transition
+  * Build-Depends: libkcal2-dev (>=4:3.4) | kdepim-dev to assist
+    backports
+
+ -- Mark Purcell <msp@debian.org>  Tue,  6 Dec 2005 18:28:08 +0000
+
+taskjuggler (2.2+beta2-2) unstable; urgency=low
+
+  * Add Build-Depends: cdbs
+    - taskjuggler - FTBFS: missing build dependency (Closes: #340692)
+
+ -- Mark Purcell <msp@debian.org>  Fri, 25 Nov 2005 18:03:21 +0000
+
+taskjuggler (2.2+beta2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Mark Purcell <msp@debian.org>  Thu, 24 Nov 2005 17:22:16 +0000
+
+taskjuggler (2.2+beta1-2) unstable; urgency=low
+
+  * Switch to cdbs
+  * Remove -perl Depends: as txjgannt no longer supported upstream
+  * docprefix.diff puts docs under /usr/share/doc/taskjuggler
+  * Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+
+ -- Mark Purcell <msp@debian.org>  Wed, 16 Nov 2005 09:38:43 +0000
+
+taskjuggler (2.2+beta1-1) unstable; urgency=low
+
+  * New upstream release
+  * Fix old-fsf-address-in-copyright-file
+
+ -- Mark Purcell <msp@debian.org>  Sun,  6 Nov 2005 11:02:56 +0000
+
+taskjuggler (2.1.1-5) unstable; urgency=low
+
+  * C++ migration package
+  * Cleanup log files in debian/rules
+  * Add Build-Depends: g++-3.4, as it doesnt yet build/test with g++-4.0
+  * Initial release Closes: #239047
+  * Initial release. (Closes: #313290: RFP: taskjuggler -- a very
+    complete project manager)
+  * Add perl packages to Depends: for tjx2gantt
+
+ -- Mark Purcell <msp@debian.org>  Sun, 18 Sep 2005 11:16:41 +0100
+
+taskjuggler (2.1.1-4) experimental; urgency=low
+
+  * Distribution experimental while the C++ tranisition is progressing
+  * Initial release Closes: #239047
+  * Initial release. (Closes: #313290: RFP: taskjuggler -- a very
+    complete project manager)
+  * Add Build-Depends: docbook-xml
+  * Edit multiple Makefile.{am,in} to move
+    /usr/share/doc/packages/taskjuggler to /usr/share/doc/taskjuggler
+
+ -- Mark Purcell <msp@debian.org>  Thu, 11 Aug 2005 19:08:59 +0100
+
+taskjuggler (2.1.1-3) experimental; urgency=low
+
+  * export kde_htmldir="\$${prefix}/share/doc/kde/HTML"
+  * Section: kde
+  * dh_shlibdeps -L taskjuggler -l debian/taskjuggler/usr/lib
+
+ -- Mark Purcell <msp@debian.org>  Thu, 11 Aug 2005 08:07:20 +0100
+
+taskjuggler (2.1.1-2) experimental; urgency=low
+
+  * Add Build-Depends: libkcal2-dev, xsltproc, libclass-methodmaker-
+    perl, libxml-parser-perl, thanks Isaac Clerencia
+
+ -- Mark Purcell <msp@debian.org>  Thu, 11 Aug 2005 08:00:48 +0100
+
+taskjuggler (2.1.1-1) experimental; urgency=low
+
+  * Initial release Closes: #239047
+  * Add Build-Depends: kdepim-dev, libdate-pcalc-perl, libpostscript-
+    simple-perl,  poster, docbook-utils, openjade
+  * configure --disable-rpath
+
+ -- Mark Purcell <msp@debian.org>  Wed, 10 Aug 2005 22:09:59 +0100
+
